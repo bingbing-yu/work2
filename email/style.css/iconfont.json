@@ -1,0 +1,65 @@
+{
+  "id": "4770165",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1973188",
+      "name": "男头像",
+      "font_class": "user__easyico",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "1973189",
+      "name": "女头像",
+      "font_class": "user__easyico1",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "9826665",
+      "name": "坐席头像",
+      "font_class": "zuoxitouxiang",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "1049964",
+      "name": "右三角",
+      "font_class": "yousanjiao",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "774418",
+      "name": "联系人",
+      "font_class": "lianxiren",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "16508838",
+      "name": "视频聊天",
+      "font_class": "shipinliaotian",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "5025914",
+      "name": "章鱼",
+      "font_class": "zhangyu",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "28587761",
+      "name": "章鱼小丸子",
+      "font_class": "zhangyuxiaowanzi",
+      "unicode": "e6a2",
+      "unicode_decimal": 59042
+    }
+  ]
+}
