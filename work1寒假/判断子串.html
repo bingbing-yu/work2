@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>判断子串</title>
+</head>
+
+<body>
+  <h3>请输入一个字符串：</h3>
+  <input type="text" id="string" placeholder="请输入一个字符串">
+  <h3>请输入一个子串：</h3>
+  <input type="text" id="sonString" placeholder="请输入一个子串">
+  <button onclick="countString()">提交</button>
+  <h3>子串出现的次数为：</h3>
+  <p id="times"></p>
+
+  <script>
+    function countString() {
+      let string = document.getElementById('string').value;
+      let sonString = document.getElementById('sonString').value;
+      let times = document.getElementById('times');
+
+      let regex = new RegExp(sonString, 'g');
+      let matches = string.match(regex);
+      //document.getElementById("times").innerHTML = matches.length;
+      if (matches)
+        times.textContent = matches.length;
+      else
+        times.textContent = 0;
+    }
+  </script>
+</body>
+
+</html>

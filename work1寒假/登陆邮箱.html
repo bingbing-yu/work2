@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登陆邮箱</title>
+</head>
+
+<body>
+  <form id="loginForm">
+    <label for="email">邮箱:</label>
+    <input type="text" id="email">
+    <br>
+    <label for="password">密码:</label>
+    <input type="password" id="password">
+    <br>
+    <button type="submit">登录</button>
+  </form>
+  <div id="success-message"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('loginForm');
+      const successMessage = document.getElementById('success-message');
+      const users = [{
+        email: 'yunding@qq.com',
+        password: 33333,
+        name: '张三',
+        age: 20,
+        strengths: 'JavaScript',
+        avatar: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1',
+      },
+      {
+        email: '12345678@163.com',
+        password: '11111',
+        name: '李四',
+        age: 19,
+        strengths: 'python',
+        avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1',
+      },
+      {
+        email: 'yundingshuyuan@qq.cn',
+        password: 222222,
+        name: '王五',
+        age: 18,
+        strengths: 'Java',
+        avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1',
+      },
+      ]
+      form.addEventListener('submit', function (event) {
+        event.preventDefault(); // 阻止表单默认提交行为
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        if (!isValidEmail(email)) {
+          alert('邮箱格式不正确!');
+          return;
+        }
+
+        // 如果邮箱有效，可以在这里处理密码验证或其他逻辑
+        const user = users.find(u => u.email === email && u.password === password);
+        if (user) {
+          successMessage.innerHTML = `
+                <h2>登录成功</h2>
+                <p>姓名：${user.name}</p >
+                <p>年龄：${user.age}</p >
+                <p>特长：${user.strengths}</p >
+            `;
+        } else {
+          // 显示错误消息
+          alert('邮箱或密码不正确！');
+        }
+      });
+      //还没学到正则表达式，这个函数真看不懂，直接复制的
+      function isValidEmail(email) {
+        const regex = /^(?=.*[@qq|@163])(?=.*\.)[^\s@]+@[^\s@]+\.[com|cn]{2,}$/;
+        return regex.test(email);
+      }
+    });
+  </script>
+</body>
+
+</html>
